@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 16px;
+  background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  color: hsl(0, 6%, 24%);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+header {
+ height: 10vh; /* Full viewport height */
+ display: flex;
+   align-items: center; /* Vertically center the content */
+}
+nav {
+  flex-basis: 50%; /* Take up the left half of the screen */
+  display: flex;
+  align-items: center;  /* Vertically center the logo */
+  justify-content: center; /* Horizontally center the logo */
+}
+
+nav img {
+  width: 150px;
+  height: auto;
+}
+
+
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+  padding: 0 10%;
+}
+
+.content {
+  max-width: 450px;
+}
+
+h1 {
+  font-weight: 300;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+p {
+  margin-bottom: 30px;
+  color: hsl(0, 36%, 70%);
+}
+
+.email-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.email-form input {
+  padding: 15px;
+  border-radius: 30px;
+  border: 1px solid hsl(0, 36%, 70%);
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.email-form button {
+  background-color: hsl(0, 93%, 68%);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 15px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.email-form button:hover {
+  background-color: hsl(0, 80%, 86%);
+}
+
+#email:invalid {
+  border-color: hsl(0, 93%, 68%);
+}
+
+#error-message {
+  color: hsl(0, 93%, 68%);
+  visibility: hidden;
+}
+
+.image-content img {
+  width: 500px;
+  height: auto;
+  display: block;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: hsl(0, 6%, 24%);
+  color: white;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+
+  .image-content img {
+    width: 100%;
+  }
+}
